@@ -1,0 +1,11 @@
+python3 -m venv .venv
+
+python -m pip install --upgrade pip
+
+python -m pip install django
+
+django-admin startproject web_project .
+
+python manage.py runserver
+
+python manage.py migrate
