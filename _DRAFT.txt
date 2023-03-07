@@ -9,3 +9,27 @@ django-admin startproject web_project .
 python manage.py runserver
 
 python manage.py migrate
+
+pip freeze > requirements.txt
+
+(.venv) [alex@AHAB app]$ python -m uvicorn web_project.asgi:application
+
+---
+
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="{{question.url}}">{{ question.text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>HABR :: No parsed sites more are available.</p>
+{% endif %}
+
+---
+
+def index(request):
+    template = loader.get_template("index.html")
+    return HttpResponse(template.render())
+
+    ---

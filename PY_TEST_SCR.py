@@ -18,3 +18,4 @@ print(f'| randint :: {r} |')
 print(f'| User @ Host :: {os.getlogin()}@{socket.gethostname()} |')
 
 #print(os.system('ip a'))
+# app/manage.py
