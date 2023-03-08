@@ -18,7 +18,7 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 # 
 COPY ./app /code/app
 
-# 
-CMD ["python3", "app/manage.py", "runserver", "0.0.0.0:8000", "--noreload"]
 
-# docker run -p 80:8000 webpro1
+WORKDIR /code/app
+# 
+CMD ["python3", "-m", "uvicorn", "web_project.asgi:application", "--host", "0.0.0.0", "--port", "8000"]

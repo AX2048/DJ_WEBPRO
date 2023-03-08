@@ -15,7 +15,7 @@ def create_text(text, file_back, file_save_to, font_file):
         cx, cy = bgr_img_width//2, bgr_img_height//2  # Center of image.
     
     # Create a transparent foreground to be result of non-text areas.
-    fgr_img = Image.new('RGBA', bgr_img.size, color=(13, 17, 23)) # Git balck: (13, 17, 23) Zero: (0, 0, 0, 0) Google doc black: (27, 27, 27) Google white: (255, 255, 255)
+    fgr_img = Image.new('RGBA', bgr_img.size, color=(32, 43, 56)) # Git balck: (13, 17, 23) Zero: (0, 0, 0, 0) Google doc black: (27, 27, 27) Google white: (255, 255, 255) css (32, 43, 56)
     
     font_size = bgr_img_width//len(THE_TEXT)
     # print(font_size)
