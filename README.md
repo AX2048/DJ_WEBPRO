@@ -1,4 +1,4 @@
-## DJ_WEBPRO | 
+## DJ_WEBPRO | Django + Uvicorn
 
 AHAB:DEV
 

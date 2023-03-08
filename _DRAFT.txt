@@ -61,3 +61,11 @@ def index(request):
 docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d uvicorn.ponomarev-aa.ru
 
 ---
+
+# set environment variables
+# запрещает Python записывать файлы pyc на диск python -B
+#ENV PYTHONDONTWRITEBYTECODE 1
+# запрещает Python буферизовать stdout и stderr python -B
+#ENV PYTHONUNBUFFERED 1
+
+---
